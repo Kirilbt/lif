@@ -1,1 +1,40 @@
 // Specific CSS for your home-page
+
+.about {
+  margin-top: 64px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 16px;
+}
+
+.about h2 {
+  grid-column: 1;
+}
+
+.about p {
+  grid-column-start: 2;
+}
+
+.services {
+  margin-top: 64px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 16px;
+}
+
+.big-card {
+  color: #444444;
+  height: 500px;
+  padding: 48px;
+  border-radius: 24px;
+}
+
+.sitter {
+  background: url(https://images.unsplash.com/photo-1506543277633-99deabfcd722?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1275&q=80);
+  background-size: cover;
+}
+
+.host {
+  background: url(https://images.unsplash.com/photo-1598329083446-e1d4b4376d3f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1315&q=80);
+  background-size: cover;
+}

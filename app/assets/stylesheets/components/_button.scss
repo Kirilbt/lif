@@ -1,0 +1,30 @@
+// Flat buttons
+
+.btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 100px;
+  background: #1EDD88;
+  transition: 0.3s ease;
+}
+
+.btn-flat:hover {
+  background: #1BCB7F;
+  color: white;
+}
+
+// Ghost buttons
+
+.btn-ghost {
+  color: #3a3a3a;
+  padding: 8px 24px;
+  border-radius: 100px;
+  border: 1px solid #3a3a3a;
+  background: #3a3a3a00;
+  transition: 0.3s ease;
+}
+
+.btn-ghost:hover {
+  background: #3a3a3a;
+  color: white;
+}
