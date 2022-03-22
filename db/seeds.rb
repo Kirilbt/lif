@@ -1,4 +1,6 @@
 require 'faker'
+User.destroy_all
+Space.destroy_all
 
 # Create users
 10.times do
