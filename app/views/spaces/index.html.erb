@@ -1,0 +1,11 @@
+<%= render "shared/navbar" %>
+<%= render "shared/herobanner" %>
+<div>
+  <% @users.each do |user| %>
+  <div>
+    <p>
+      <%= user.first_name %>
+    </p>
+  </div>
+  <% end %>
+</div>
