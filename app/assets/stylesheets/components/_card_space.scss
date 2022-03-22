@@ -1,0 +1,38 @@
+.card-space {
+  overflow: hidden;
+  background: white;
+}
+
+.card-space > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-space h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-space p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-space .card-space-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-space-infos .card-space-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
