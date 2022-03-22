@@ -11,7 +11,7 @@ require 'faker'
 10.times do
   User.create!(
     email: Faker::Internet.email,
-    encrypted_password: '123456',
+    password: '123456',
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
     info_host: Faker::Lorem.sentence(word_count: 10),
