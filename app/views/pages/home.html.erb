@@ -1,2 +1,19 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%= render "shared/navbar" %>
+<%= render "shared/herobanner" %>
+<div class="container">
+  <div class="about">
+    <h2>Meet other plant enthusiasts, here to help keep your indoor plants healthy.</h2>
+    <p>As long time plant enthusiasts, we started plant sitting in 2017 as we went away on holiday and came back to a flat full of dead plants. Was there anyone who could take care of them for our next trip? Since there were not many options around at this point, we decided to fill this gap in the market.</p>
+  </div>
+  <div class="services">
+    <div class="big-card sitter">
+      <h3>Need a plant sitter?</h3>
+      <%= link_to "Find space", "#", class: "btn btn-ghost" %>
+    </div>
+    <div class="big-card host">
+      <h3>Keep plants?</h3>
+      <%= link_to "Become a host", "#", class: "btn btn-ghost" %>
+    </div>
+  </div>
+</div>
+  <%= render "shared/footer" %>
