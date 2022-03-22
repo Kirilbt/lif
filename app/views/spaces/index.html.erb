@@ -1,0 +1,11 @@
+<%= render "shared/navbar" %>
+<%= render "shared/herobanner" %>
+<div>
+  <% @spaces.each do |space| %>
+  <div>
+    <p>
+      <%= space.title %>
+    </p>
+  </div>
+  <% end %>
+</div>
