@@ -1,0 +1,26 @@
+footer {
+  margin-top: 64px;
+  padding: 32px 0;
+  background: #eee;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+footer .logo {
+  grid-column: 1;
+}
+
+footer .quick-links {
+  grid-column: 2;
+}
+
+.quick-links li {
+  list-style-type: none;
+}
+
+.about-links {
+  grid-column: 3;
+}

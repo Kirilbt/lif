@@ -1,26 +1,40 @@
 // Specific CSS for your home-page
 
-// Banner
-.banner {
+.about {
+  margin-top: 64px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 16px;
+}
+
+.about h2 {
+  grid-column: 1;
+}
+
+.about p {
+  grid-column-start: 2;
+}
+
+.services {
+  margin-top: 64px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 16px;
+}
+
+.big-card {
+  color: #444444;
+  height: 500px;
+  padding: 48px;
+  border-radius: 24px;
+}
+
+.sitter {
+  background: url(https://images.unsplash.com/photo-1506543277633-99deabfcd722?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1275&q=80);
   background-size: cover;
-  background-position: center;
-  padding: 150px 0;
-  height: 60vh;
-  align-items: center;
 }
 
-.banner h1 {
-  text-align: center;
-  margin: 0;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
-  font-weight: bold;
-}
-
-.banner p {
-  text-align: center;
-  color: white;
-  font-size: 32px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+.host {
+  background: url(https://images.unsplash.com/photo-1598329083446-e1d4b4376d3f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1315&q=80);
+  background-size: cover;
 }
