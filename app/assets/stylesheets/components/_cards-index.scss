@@ -1,7 +1,15 @@
-.cards {
+.cards-index {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+  a {
+    color: black;
+    text-decoration: none;
+    :hover {
+      color: black;
+      text-decoration: none;
+    }
+  }
 }
 
 // Smallest device
