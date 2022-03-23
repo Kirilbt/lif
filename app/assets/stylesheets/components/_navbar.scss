@@ -22,16 +22,16 @@
 .navbar-light {
 
   .navbar-nav .nav-link {
-  color: rgb(255, 255, 255);
+  color: white;
   margin-right: 16px;
 
     :hover {
-      opacity: 0.5;
+      color: aquamarine !important;
     }
   }
 
   .navbar-title {
-    color: rgb(255, 255, 255);
+    color: white;
   }
 }
 
@@ -41,6 +41,10 @@
 
   .navbar-nav .nav-link {
     color: black;
+
+    :hover {
+      opacity: 0.5;
+    }
   }
 
   .navbar-title {
