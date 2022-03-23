@@ -1,6 +1,9 @@
 .navbar-lewagon {
+  z-index: 10000;
   justify-content: space-between;
+  background: white;
   background: transparent;
+  transition: 0.5s ease;
   border-bottom: 1px solid rgba(255, 255, 255, 0.212);
   color: white;
 
@@ -8,8 +11,48 @@
     flex-grow: 0;
   }
 
-  .navbar-brand img {
-    width: 40px;
+  .navbar-brand{
+
+    img {
+      width: 40px;
+    }
+  }
+}
+
+.navbar-light {
+
+  .navbar-nav .nav-link {
+  color: white;
+  margin-right: 16px;
+
+    :hover {
+      color: aquamarine !important;
+    }
+  }
+
+  .navbar-title {
+    color: white;
+  }
+}
+
+
+.navbar-lewagon-white {
+  background-color: rgb(255, 255, 255);
+
+  .navbar-nav .nav-link {
+    color: black;
+
+    :hover {
+      opacity: 0.5;
+    }
+  }
+
+  .navbar-title {
+    color: black;
+  }
+
+  .filter-white {
+    filter: invert(100%) sepia(100%) saturate(18%) hue-rotate(240deg) brightness(0%) contrast(100%);
   }
 }
 
