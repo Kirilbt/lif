@@ -64,7 +64,7 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
-  confir.action.mailer.default_url_options = { host: 'https://lif-kirilbt.herokuapp.com/' }
+  config.action_mailer.default_url_options = { host: 'https://lif-kirilbt.herokuapp.com/' }
 
 
   # Ignore bad email addresses and do not raise email delivery errors.
