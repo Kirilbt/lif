@@ -21,19 +21,9 @@
 
     <div class="col-md-4 offset-md-1">
       <div class="card p-3 sticky-top border card-checkout">
-        <h4 class="border-bottom pb-3"><strong><%= @space.price_day %> CHF</strong> / day</h4>
+        <h4 class="border-bottom pb-3 mb-4"><strong><%= @space.price_day %> CHF</strong> / day</h4>
 
-        <div class="d-flex justify-content-between mt-3">
-          <p><strong>Arrival date:</strong></p>
-          <p>12/03</p>
-        </div>
-
-        <div class="d-flex justify-content-between">
-          <p><strong>Departure date:</strong></p>
-          <p>18/03</p>
-        </div>
-
-        <a href="#" class="btn btn-primary mb-3">Book</a>
+        <%= render 'spaces/form' %>
       </div>
 
 
