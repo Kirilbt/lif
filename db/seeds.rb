@@ -1,6 +1,8 @@
 require 'faker'
-User.destroy_all
+Booking.destroy_all
 Space.destroy_all
+User.destroy_all
+
 
 # Create users
 10.times do
@@ -9,8 +11,7 @@ Space.destroy_all
     password: '123456',
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
-    info_host: Faker::Lorem.sentence(word_count: 10),
-    address: "#{Faker::Address.street_address}, #{Faker::Address.zip} #{Faker::Address.city}"
+    info_host: Faker::Lorem.sentence(word_count: 10)
   )
   Space.create!(
     user_id: User.last.id,
@@ -18,6 +19,7 @@ Space.destroy_all
     category: ['Small', 'Large'].sample,
     price_day: Faker::Commerce.price,
     info_space: Faker::Lorem.sentence(word_count: 15),
+    address: "#{Faker::Address.street_address}, #{Faker::Address.zip} #{Faker::Address.city}",
     available: true
   )
 end
