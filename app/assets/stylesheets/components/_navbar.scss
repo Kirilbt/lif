@@ -25,14 +25,20 @@
   color: white;
   margin-right: 16px;
 
+    // Doesn't work (overwrited by bootstrap)
     :hover {
-      color: aquamarine !important;
+      color: rgba(255, 255, 255, 0.700) !important;
+      opacity: 0.5;
     }
   }
 
   .navbar-title {
     color: white;
   }
+
+  .filter-white {
+  filter: invert(100%) sepia(100%) saturate(18%) hue-rotate(240deg) brightness(105%) contrast(100%);
+}
 }
 
 
@@ -42,7 +48,9 @@
   .navbar-nav .nav-link {
     color: black;
 
+    // Doesn't work (overwrited by bootstrap)
     :hover {
+      color: rgba(0, 0, 0, 0.500);
       opacity: 0.5;
     }
   }
@@ -60,8 +68,4 @@
   position: fixed;
   top: 0;
   width: 100%;
-}
-
-.filter-white {
-  filter: invert(100%) sepia(100%) saturate(18%) hue-rotate(240deg) brightness(105%) contrast(100%);
 }
