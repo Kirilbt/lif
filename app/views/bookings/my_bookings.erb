@@ -1,0 +1,27 @@
+<div class="banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1583753075968-1236ccb83c66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=754&q=80);">
+  <div class="container">
+    <h1>My bookings</h1>
+  </div>
+</div>
+<div class="container mt-4">
+  <div class="cards-index">
+    <% @bookings.each do |booking| %>
+      <%= link_to "#" do %>
+        <div class="card-space">
+        <img src="https://images.unsplash.com/photo-1463320898484-cdee8141c787?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />
+          <div class="card-space">
+            <div class="card-space-infos">
+              <div>
+                <h2><%= booking.space.title %></h2>
+                <p><%= booking.space.info_space %></p>
+              </div>
+              <%# TOTAL PRICE %>
+              <%# < class="card-space-pricing"><%= space.price_day  %>
+              <%# <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-space-user avatar-bordered" /> %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
