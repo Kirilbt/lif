@@ -4,24 +4,18 @@
   </div>
 </div>
 <div class="container mt-4">
-  <div class="cards-index">
+  <div class="row">
     <% @bookings.each do |booking| %>
-      <%= link_to "#" do %>
-        <div class="card-space">
+        <div class="card-product  mb-2">
         <img src="https://images.unsplash.com/photo-1463320898484-cdee8141c787?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />
-          <div class="card-space">
-            <div class="card-space-infos">
-              <div>
+            <div class="card-product-infos">
                 <h2><%= booking.space.title %></h2>
-                <p><%= booking.space.info_space %></p>
-              </div>
-              <%# TOTAL PRICE %>
-              <%# < class="card-space-pricing"><%= space.price_day  %>
-              <%# <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-space-user avatar-bordered" /> %>
-            </div>
+                <p>Hosted by <%= booking.space.user.first_name %></p>
+                <p><%= booking.start_date.strftime("%B %d,%Y") %> - <%= booking.end_date.strftime("%B %d,%Y") %></p>
+                <p>Total price: <%= (booking.end_date - booking.start_date).to_i * booking.space.price_day %></p>
+                <p><%= booking.status %></p>
           </div>
         </div>
-      <% end %>
     <% end %>
   </div>
 </div>
