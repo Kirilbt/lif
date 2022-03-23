@@ -16,6 +16,16 @@ class BookingsController < ApplicationController
     end
   end
 
+  def my_bookings
+    @bookings = Booking.where(user_id: current_user)
+    # @bookings = Booking.find
+    # bookings.each do |booking|
+    #   if booking.user == current_user
+    #     @user_booking = booking
+    #   end
+    # end
+  end
+
   private
 
   def booking_params
