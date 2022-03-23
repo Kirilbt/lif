@@ -9,8 +9,9 @@ class BookingsController < ApplicationController
     @space = Space.find(params[:space_id])
     @booking.space = @space
     @booking.user = current_user
+    @booking.status = "Pending"
     if @booking.save
-      redirect_to spaces_path
+      redirect_to my_bookings_path(current_user)
     else
       render 'spaces/show'
     end
