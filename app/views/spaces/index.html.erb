@@ -26,7 +26,7 @@
               <% if space.user.photo.key? %>
                 <img src=<%= space.user.photo.url %> class="card-space-user avatar-bordered" />
               <% else %>
-                <%= cl_image_tag "default_user_picture_l7c7yt", class:"card-space-user avatar-bordered" %>
+                <%= image_tag "default_user_picture.svg", class:"card-space-user avatar-bordered" %>
               <% end %>
             </div>
           </div>
