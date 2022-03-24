@@ -1,24 +1,27 @@
 class BookingsController < ApplicationController
-  def new
-    @space = Space.find(params[:space_id])
-    @booking = Booking.new
-  end
+
+  # def new
+  #   @space = Space.find(params[:space_id])
+  #   @booking = Booking.new
+  # end
 
   def create
     @booking = Booking.new(booking_params)
     @space = Space.find(params[:space_id])
     @booking.space = @space
+    # redirect_to user_session_path and return unless user_signed_in?
+
     @booking.user = current_user
     @booking.status = "Pending"
     if @booking.save
-      redirect_to my_bookings_path(current_user)
+      redirect_to my_bookings_path
     else
       render 'spaces/show'
     end
   end
 
   def my_bookings
-    @bookings = Booking.where(user_id: current_user)
+    @bookings = Booking.where(user: current_user)
   end
 
   private

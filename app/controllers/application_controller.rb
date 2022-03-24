@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  before_action :authenticate_user!
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   def configure_permitted_parameters
@@ -8,4 +9,13 @@ class ApplicationController < ActionController::Base
     # For additional in app/views/devise/registrations/edit.html.erb
     devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name])
   end
+
+  # def after_sign_in_path_for(resource_or_scope)
+  #   raise
+  #   if params[:controller] == "bookings"
+  #     redirect_to my_bookings_path
+  #   else
+  #     super
+  #   end
+  # end
 end
