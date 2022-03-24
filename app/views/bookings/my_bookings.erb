@@ -4,18 +4,47 @@
   </div>
 </div>
 <div class="container mt-4">
-  <div class="row">
-    <% @bookings.each do |booking| %>
-        <div class="card-product  mb-2">
-        <img src="https://images.unsplash.com/photo-1463320898484-cdee8141c787?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />
-            <div class="card-product-infos">
+  <div class="col-8 offset-2">
+    <div class="row">
+      <% @bookings.each do |booking| %>
+          <div class="card-booking  mb-2">
+            <img src="https://images.unsplash.com/photo-1463320898484-cdee8141c787?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />
+              <div class="card-booking-infos">
                 <h2><%= booking.space.title %></h2>
                 <p>Hosted by <%= booking.space.user.first_name %></p>
-                <p><%= booking.start_date.strftime("%B %d,%Y") %> - <%= booking.end_date.strftime("%B %d,%Y") %></p>
-                <p>Total price: <%= (booking.end_date - booking.start_date).to_i * booking.space.price_day %></p>
-                <p><%= booking.status %></p>
+              </div>
+              <div class="card-booking-infos">
+                <p>Check-in</p>
+                <h2><%= booking.start_date.strftime("%B %d,%Y") %></h2>
+              </div>
+              <div class="card-booking-infos">
+                <p>Check-out</p>
+                <h2><%= booking.end_date.strftime("%B %d,%Y")%></h2>
+              </div>
+              <% case booking.status %>
+              <% when "Pending" %>
+                <div class="card-booking-infos status-yellow">
+                    <p><%= booking.status %></p>
+                </div>
+              <% when "Approved" %>
+                <div class="card-booking-infos status-green">
+                    <p><%= booking.status %></p>
+                </div>
+              <% when "Refused" %>
+                <div class="card-booking-infos status-red">
+                    <p><%= booking.status %></p>
+                </div>
+              <% else %>
+                <div class="card-booking-infos">
+                  <p><%= booking.status %></p>
+              </div>
+              <% end %>
+              <div class="card-booking-infos item-end">
+                  <p class="card-price">CHF <%= ((booking.end_date - booking.start_date).to_i * booking.space.price_day).round(0) %></p>
+              </div>
+
           </div>
-        </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>

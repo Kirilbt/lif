@@ -1,26 +1,36 @@
-.card-product {
+.card-booking {
   overflow: hidden;
   height: 120px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   align-items: center;
   padding: 12px 12px;
 }
 
-.card-product img {
+.item-end {
+  grid-column-end: five;
+}
+
+.card-booking .card-price {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.card-booking img {
   height: 100%;
   width: 120px;
   object-fit: cover;
 }
 
-.card-product h2 {
+.card-booking h2 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
 
-.card-product p {
+.card-booking p {
   font-size: 12px;
   line-height: 1.4;
   opacity: .7;
@@ -28,11 +38,33 @@
   margin-top: 8px;
 }
 
-.card-product-infos {
+.card-booking-infos {
   color: black;
   text-decoration: none !important;
 }
 
-.card-product .card-product-infos {
+.card-booking .card-booking-infos {
   padding: 16px;
+}
+
+.status-yellow p {
+  border: 1px gold solid;
+  border-radius: 5px;
+  color: gold;
+  text-align: center;
+}
+
+
+.status-red p {
+  border: 1px red solid;
+  border-radius: 5px;
+  color: red;
+  text-align: center;
+}
+
+.status-green p {
+  border: 1px green solid;
+  border-radius: 5px;
+  color: green;
+  text-align: center;
 }
