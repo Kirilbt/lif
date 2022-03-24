@@ -5,4 +5,6 @@ class Space < ApplicationRecord
   validates :price_day, numericality: { greater_than_or_equal_to: 0 }
   validates :info_space, length: { minimum: 10 }
   validates :category, inclusion: ['Small', 'Large']
+
+  has_one_attached :photo
 end
