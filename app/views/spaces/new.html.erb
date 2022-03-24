@@ -13,6 +13,7 @@
         <%= f.input :address %>
         <%= f.input :price_day %>
         <%= f.input :category, collection: ['Small', 'Large'] %>
+        <%= f.input :photo, as: :file %>
         <%= f.submit class: "btn-flat"%>
       <% end %>
     </div>
