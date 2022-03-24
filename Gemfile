@@ -42,6 +42,9 @@ gem 'simple_form', github: 'heartcombo/simple_form'
 # Cloudinary
 gem 'cloudinary', '~> 1.16.0'
 
+# PG SEARCH
+gem 'pg_search'
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
