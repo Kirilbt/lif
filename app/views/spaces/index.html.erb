@@ -11,15 +11,23 @@
     <% @spaces.each do |space| %>
       <%= link_to space_path(space) do %>
         <div class="card-space">
-        <img src="https://images.unsplash.com/photo-1463320898484-cdee8141c787?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />
-          <div class="card-space">
+        <% if space.photo.key? %>
+          <img src=<%= space.photo.url %> />
+        <% else %>
+          <img src="https://images.unsplash.com/photo-1463320898484-cdee8141c787?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />
+        <% end %>
+          <div>
             <div class="card-space-infos">
               <div>
                 <h2><%= space.title %></h2>
                 <p><%= space.info_space %></p>
               </div>
               <h2 class="card-space-pricing"><%= space.price_day %></h2>
-              <%# <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-space-user avatar-bordered" /> %>
+              <% if space.user.photo.key? %>
+                <img src=<%= space.user.photo.url %> class="card-space-user avatar-bordered" />
+              <% else %>
+                <%= cl_image_tag "default_user_picture_l7c7yt", class:"card-space-user avatar-bordered" %>
+              <% end %>
             </div>
           </div>
         </div>

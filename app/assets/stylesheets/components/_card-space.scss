@@ -4,8 +4,6 @@
   transition-duration: 0.5s;
 }
 
-
-
 .card-space > img {
   height: 200px;
   width: 100%;
@@ -25,7 +23,7 @@
 }
 
 
-.card-space .card-space-infos {
+.card-space-infos {
   padding: 16px;
   display: flex;
   justify-content: space-between;
@@ -35,6 +33,7 @@
 
 .card-space-infos .card-space-user {
   position: absolute;
+  z-index: 1000;
   right: 16px;
   top: -20px;
   width: 40px;
