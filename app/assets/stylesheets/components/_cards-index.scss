@@ -1,6 +1,6 @@
 .cards-index {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
   a {
     color: black;
@@ -10,6 +10,7 @@
       text-decoration: none;
     }
   }
+  padding-right: 16px;
 }
 
 // Smallest device
@@ -17,32 +18,38 @@
   .cards-index {
     grid-template-columns: 1fr;
   }
+  .map {
+    display: none;
+  }
 }
 
 // Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
+@media (min-width: 576px) and (max-width: 768px){
+  .cards-index {
+    grid-template-columns: 1fr;
+  }
+  .map {
+    display: none;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 992px) {
   .cards-index {
     grid-template-columns: 1fr;
   }
 }
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1200px) {
   .cards-index {
     grid-template-columns: 1fr 1fr;
-  }
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-  .cards-index {
-    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .cards-index {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
