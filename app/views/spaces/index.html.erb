@@ -20,9 +20,9 @@
             <div class="card-space-infos">
               <div>
                 <h2><%= space.title %></h2>
-                <p><%= space.info_space %></p>
+                <p><%= truncate(space.info_space, :length => 110) %></p>
               </div>
-              <h2 class="card-space-pricing"><%= space.price_day %></h2>
+              <h2 class="card-space-pricing">CHF <%= space.price_day.round(0) %></h2>
               <% if space.user.photo.key? %>
                 <img src=<%= space.user.photo.url %> class="card-space-user avatar-bordered" />
               <% else %>
