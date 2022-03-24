@@ -2,7 +2,11 @@ class SpacesController < ApplicationController
   before_action :set_space, only: [:show]
 
   def index
-    @spaces = Space.all
+    if params[:query].present?
+      @spaces = Space.search_by_address(params[:query])
+    else
+      @spaces = Space.all
+    end
 
     @markers = @spaces.geocoded.map do |space|
       {

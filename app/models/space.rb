@@ -10,4 +10,11 @@ class Space < ApplicationRecord
   validates :category, inclusion: ['Small', 'Large']
 
   has_one_attached :photo
+
+  include PgSearch::Model
+  pg_search_scope :search_by_address,
+    against: [:address, :title, :info_space],
+    using: {
+      tsearch: { prefix: true }
+    }
 end
