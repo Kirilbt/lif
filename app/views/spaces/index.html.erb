@@ -1,12 +1,7 @@
 <%= render "shared/navbar" %>
 <%= render "shared/herobanner" %>
 
-<div style="width: 100%; height: 600px;"
-  data-controller="mapbox"
-  data-mapbox-markers-value="<%= @markers.to_json %>"
-  data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-
-<div class="container">
+<div class="container content">
   <div class="cards-index">
     <% @spaces.each do |space| %>
       <%= link_to space_path(space) do %>
@@ -34,4 +29,9 @@
       <% end %>
     <% end %>
   </div>
+
+  <div class="map" style="width: 100%; height: 600px;"
+  data-controller="mapbox"
+  data-mapbox-markers-value="<%= @markers.to_json %>"
+  data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 </div>
