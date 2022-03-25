@@ -21,6 +21,12 @@ class BookingsController < ApplicationController
     @bookings = Booking.where(user_id: current_user)
   end
 
+  def update
+    @booking = Booking.find(params[:id])
+    @booking.update(status: params[:commit])
+    redirect_to my_spaces_path
+  end
+
   private
 
   def booking_params
