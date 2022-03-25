@@ -1,2 +1,10 @@
-<h2><%= space.title %></h2>
-<p><%= space.address %></p>
+<%= link_to space_path(space) do %>
+  <% if space.photo.key? %>
+    <img src=<%= space.photo.url%> class="info_window_thumbnails" />
+  <% else %>
+    <img src="https://images.unsplash.com/photo-1463320898484-cdee8141c787?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />
+  <% end %>
+  <h2><%= space.title %></h2>
+  <p><%= space.address %></p>
+  <h2>CHF <%= space.price_day.round(0) %></h2>
+<% end %>
