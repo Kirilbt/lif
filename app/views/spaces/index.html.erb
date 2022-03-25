@@ -3,7 +3,7 @@
 
 <div class="container content">
   <div class="cards-index">
-    <% @spaces.each do |space| %>
+    <% @spaces.reverse_each do |space| %>
       <%= link_to space_path(space) do %>
         <div class="card-space">
         <% if space.photo.key? %>
