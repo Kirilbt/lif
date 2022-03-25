@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   end
 
   get '/my_bookings', to: 'bookings#my_bookings'
+  get '/my_spaces', to: 'spaces#my_spaces'
 end

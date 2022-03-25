@@ -1,21 +1,23 @@
 <div class="banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1583753075968-1236ccb83c66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=754&q=80);">
   <div class="container">
-    <h1>My bookings</h1>
+    <h1>My spaces</h1>
   </div>
 </div>
 <div class="container mt-4">
   <div class="col-8 offset-2">
+    <% @spaces.each do |space| %>
     <div class="row">
-      <% @bookings.each do |booking| %>
+      <% bookings = space.bookings%>
+          <% bookings.each do |booking| %>
           <div class="card-booking  mb-2">
             <img src="https://images.unsplash.com/photo-1463320898484-cdee8141c787?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />
               <div class="card-booking-infos">
-                <h2><%= booking.space.title %></h2>
-                <p>Hosted by <%= booking.space.user.first_name %></p>
+                <h2><%= space.title %></h2>
+                <p>Reservation name <%= booking.user.first_name %></p>
               </div>
               <div class="card-booking-infos">
                 <p>Check-in</p>
-                <h2><%= booking.start_date.strftime("%B %d,%Y") %></h2>
+                <h2><%= booking.start_date.strftime("%B %d,%Y")%></h2>
               </div>
               <div class="card-booking-infos">
                 <p>Check-out</p>
@@ -36,14 +38,14 @@
                 </div>
               <% else %>
                 <div class="card-booking-infos">
-                  <p><%= booking.status %></p>
+                  <p></p>
               </div>
               <% end %>
               <div class="card-booking-infos item-end">
                   <p class="card-price">CHF <%= ((booking.end_date - booking.start_date).to_i * booking.space.price_day).round(0) %></p>
               </div>
-
           </div>
+          <% end %>
       <% end %>
     </div>
   </div>
