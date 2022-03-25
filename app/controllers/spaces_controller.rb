@@ -36,6 +36,10 @@ class SpacesController < ApplicationController
     end
   end
 
+  def my_spaces
+    @spaces = Space.where(user: current_user)
+  end
+
   private
 
   def set_space

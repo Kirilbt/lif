@@ -42,7 +42,6 @@
               <div class="card-booking-infos item-end">
                   <p class="card-price">CHF <%= ((booking.end_date - booking.start_date).to_i * booking.space.price_day).round(0) %></p>
               </div>
-
           </div>
       <% end %>
     </div>
