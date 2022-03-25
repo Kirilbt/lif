@@ -80,7 +80,7 @@ users = User.all
 counter_users = 0
 
 10.times do
-  user_image = URI.open(users[counter_users])
+  user_image = URI.open(user_images[counter_users])
   users[counter_users].photo.attach(io: user_image, filename: 'nes.png', content_type: 'image/png')
   counter_users += 1
 end
