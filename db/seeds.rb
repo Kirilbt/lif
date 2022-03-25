@@ -1,5 +1,6 @@
 require 'faker'
 require "open-uri"
+
 Booking.destroy_all
 Space.destroy_all
 User.destroy_all
@@ -57,7 +58,29 @@ counter_image = 0
 spaces = Space.all
 
 10.times do
-  URI.open(images[counter])
-  spaces[counter].photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+  image = URI.open(images[counter_image])
+  spaces[counter_image].photo.attach(io: image, filename: 'nes.png', content_type: 'image/png')
   counter_image += 1
+end
+
+user_images = [
+  'https://images.unsplash.com/photo-1510227272981-87123e259b17?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=3759e09a5b9fbe53088b23c615b6312e',
+  'https://api.uifaces.co/our-content/donated/KtCFjlD4.jpg',
+  'https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ',
+  'https://images.unsplash.com/photo-1511485977113-f34c92461ad9?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ',
+  'https://randomuser.me/api/portraits/women/17.jpg',
+  'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?crop=faces&fit=crop&h=200&w=200&auto=compress&cs=tinysrgb',
+  'https://images.unsplash.com/photo-1502378735452-bc7d86632805?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=aa3a807e1bbdfd4364d1f449eaa96d82',
+  'https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=d5849d81af587a09dbcf3f11f6fa122f',
+  'https://api.uifaces.co/our-content/donated/VxDQx_gA.jpg',
+  'https://randomuser.me/api/portraits/men/91.jpg'
+]
+
+users = User.all
+counter_users = 0
+
+10.times do
+  user_image = URI.open(users[counter_users])
+  users[counter_users].photo.attach(io: user_image, filename: 'nes.png', content_type: 'image/png')
+  counter_users += 1
 end
