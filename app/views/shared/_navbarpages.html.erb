@@ -3,7 +3,7 @@
     <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "lif-logo.svg", class: "" %><span class="navbar-pages-title"> lif</span>
     <% end %>
-    
+
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -26,7 +26,7 @@
             <% end %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "My bookings", my_bookings_path, class: "dropdown-item" %>
-              <%# <%= link_to "My Spaces", my_spaces_path, class: "dropdown-item" %>
+              <%= link_to "My Spaces", my_spaces_path, class: "dropdown-item"%>
               <%= link_to "Profile", "#", class: "dropdown-item" %>
               <%= link_to "Settings", "#", class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
