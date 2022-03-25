@@ -7,10 +7,10 @@
   <div class="col-8 offset-2">
     <div class="row">
       <% @bookings.each do |booking| %>
-          <div class="card-booking  mb-2">
+          <div class="card-booking">
             <img src="https://images.unsplash.com/photo-1463320898484-cdee8141c787?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />
               <div class="card-booking-infos">
-                <h2><%= booking.space.title %></h2>
+                <h2><%= truncate(booking.space.title, :length => 25) %></h2>
                 <p>Hosted by <%= booking.space.user.first_name %></p>
               </div>
               <div class="card-booking-infos">
