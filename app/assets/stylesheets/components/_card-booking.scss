@@ -48,23 +48,25 @@
 }
 
 .status-yellow p {
-  border: 1px gold solid;
-  border-radius: 5px;
-  color: gold;
+  background: rgb(248, 230, 160);
+  border-radius: 6px;
+  color: rgb(182, 134, 2);
   text-align: center;
+  padding: 2px 0;
 }
 
-
 .status-red p {
-  border: 1px red solid;
-  border-radius: 5px;
-  color: red;
+  background: rgb(255, 184, 181);
+  border-radius: 6px;
+  color: rgb(182, 26, 26);
   text-align: center;
+  padding: 2px 0;
 }
 
 .status-green p {
-  border: 1px green solid;
-  border-radius: 5px;
-  color: green;
+  background: rgb(202, 255, 181);
+  border-radius: 6px;
+  color: rgb(18, 141, 7);
   text-align: center;
+  padding: 2px 0;
 }
