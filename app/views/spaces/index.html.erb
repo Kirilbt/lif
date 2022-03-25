@@ -13,11 +13,14 @@
         <% end %>
           <div>
             <div class="card-space-infos">
-              <div>
+              <div class="red-border">
                 <h2><%= space.title %></h2>
-                <p><%= truncate(space.info_space, :length => 110) %></p>
+                <p class="info_space"><%= truncate(space.info_space, :length => 95) %></p>
+                <div class="red-border">
+                  <h2 class="card-space-pricing">CHF <%= space.price_day.round(0) %></h2>
+                </div>
               </div>
-              <h2 class="card-space-pricing">CHF <%= space.price_day.round(0) %></h2>
+
               <% if space.user.photo.key? %>
                 <img src=<%= space.user.photo.url %> class="card-space-user avatar-bordered" />
               <% else %>

@@ -1,7 +1,9 @@
 .card-space {
   overflow: hidden;
   background: white;
+  border-radius: 8px;
   transition-duration: 0.5s;
+  min-height: 314px;
 }
 
 .card-space > img {
@@ -19,7 +21,7 @@
 .card-space p {
   font-size: 12px;
   opacity: .7;
-  margin: 0;
+  margin-bottom: 8px;
 }
 
 .card-space-infos {
@@ -46,11 +48,6 @@
 }
 
 .card-space-infos .card-space-pricing {
-  position: absolute;
-  right: 5px;
-  bottom: 5px;
+  right: 16px;
+  bottom: 16px;
 }
-
-// .card-space:hover {
-//   opacity: 0.3;
-// }
